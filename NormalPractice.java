@@ -66,4 +66,17 @@ public class NormalPractice extends TrainingSessions
     {
         this.doubleMileage = doubleMileage;
     }
+
+    @Override
+    public String toString() 
+    {
+        if (hasDoubleRun) 
+        {
+            return super.toString() + ", Type: Normal Practice, Miles: " + miles + ", Double Run: Yes (" + doubleMileage + " miles, Total: " + (miles + doubleMileage) + " miles)";
+        } 
+        else 
+        {
+            return super.toString() + ", Type: Normal Practice, Miles: " + miles + ", Double Run: No";
+        }
+    }
 }

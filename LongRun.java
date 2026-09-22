@@ -22,5 +22,11 @@ public class LongRun extends TrainingSessions
     {
         this.miles = miles;
     }
+
+    @Override
+    public String toString() 
+    {
+        return super.toString() + ", Type: Long Run, Miles: " + miles;
+    }
 }
 

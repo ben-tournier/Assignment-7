@@ -22,5 +22,11 @@ public class Workout extends TrainingSessions
     {
         this.workout = workout;
     }
+
+    @Override
+    public String toString() 
+    {
+        return super.toString() + ", Type: Workout, Workout: " + workout;
+    }
 }
 
