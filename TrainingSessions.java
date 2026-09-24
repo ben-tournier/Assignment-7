@@ -34,6 +34,9 @@ public abstract class TrainingSessions
         this.date = date;
     }
 
+    // Each subclass must say how many miles it covers
+    public abstract double getTotalMiles();
+
     @Override
     public String toString() 
     {

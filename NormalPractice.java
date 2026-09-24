@@ -68,15 +68,19 @@ public class NormalPractice extends TrainingSessions
     }
 
     @Override
+    public double getTotalMiles() 
+    {
+        return miles + doubleMileage;
+    }
+
+    @Override
     public String toString() 
     {
+        String result = "Practice - " + super.toString() + ", Miles: " + miles;
         if (hasDoubleRun) 
         {
-            return super.toString() + ", Type: Normal Practice, Miles: " + miles + ", Double Run: Yes (" + doubleMileage + " miles, Total: " + (miles + doubleMileage) + " miles)";
-        } 
-        else 
-        {
-            return super.toString() + ", Type: Normal Practice, Miles: " + miles + ", Double Run: No";
+            result += ", Double: " + doubleMileage;
         }
+        return result;
     }
 }

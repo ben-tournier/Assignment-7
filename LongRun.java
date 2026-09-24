@@ -24,9 +24,31 @@ public class LongRun extends TrainingSessions
     }
 
     @Override
+    public double getTotalMiles() 
+    {
+        return miles;
+    }
+
+    // Overload 1: pace from total minutes
+    public double getPace(int totalMinutes) 
+    {
+        if (miles == 0) 
+        {
+            return 0.0;
+        }
+        return totalMinutes / miles;   // minutes per mile
+    }
+
+    // Overload 2: pace from hours and minutes
+    public double getPace(int hours, int minutes) 
+    {
+        return getPace(hours * 60 + minutes);   // reuses overload 1
+    }
+
+    @Override
     public String toString() 
     {
-        return super.toString() + ", Type: Long Run, Miles: " + miles;
+        return "Long Run - " + super.toString() + ", Miles: " + miles;
     }
 }
 

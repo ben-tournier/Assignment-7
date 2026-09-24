@@ -24,9 +24,15 @@ public class Workout extends TrainingSessions
     }
 
     @Override
+    public double getTotalMiles() 
+    {
+        return 0.0;   // no mileage tracked for workouts
+    }
+
+    @Override
     public String toString() 
     {
-        return super.toString() + ", Type: Workout, Workout: " + workout;
+        return "Workout - " + super.toString() + ", Workout: " + workout;
     }
 }
 
